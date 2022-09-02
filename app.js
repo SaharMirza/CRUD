@@ -11,7 +11,7 @@ const Categories = require('./Routes/Categories')
 const { verifyAccessToken } = require('./helpers/jwthelper')
 
 // connect db to node.js using link from database access and writing password 
-mongoose.connect('mongodb+srv://SaharMirza:Strawberry2@eatery.mwwmq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect(`mongodb+srv://SaharMirza:${process.env.MDPASSWORD}.mwwmq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
 
 // to check if connection established or not 
 mongoose.connection.on('error', err => {
